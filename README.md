@@ -26,6 +26,7 @@ In the Texture2D import settings for your sprite sheet, set the sprite mode to m
 Don't forget to set the pixels per unit to the desired amount.
 
 ![16x16SpriteSheetTemplate](https://user-images.githubusercontent.com/122301912/216241731-125881c9-6ad4-4496-9648-bb1140568ee5.png)
+![16x16SpriteSheetExample](https://user-images.githubusercontent.com/122301912/216242646-f8b794fa-452f-41dc-8ae7-fa02c7ce5ccb.png)
 
 >IMPORTANT Do not change the names of any of the sliced sprites in the Sprite Editor, as this tool uses the default assigned names of each sprite to properly apply them to the rule tile.
 
