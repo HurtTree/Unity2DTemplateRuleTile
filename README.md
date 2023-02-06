@@ -9,6 +9,12 @@ You can use this tool, it's contents and examples, however you'd like.\
 If you have any questions, suggestions, or feedback, please let me know!
 <img src="https://user-images.githubusercontent.com/122301912/216240864-86a7e50c-9bcc-41f2-a11f-da1cda4dca6c.png" width="500">
 
+# Fixed Issue Where Builds Would Fail
+Moved all UnityEdior and System.Linq namespace uses, from the RuleTileFromTemplate.cs script to the RuleTileFromTemplateEditor.cs script. The UnityEditor namespace can't be used in scripts that need to be bundled for build.
+
+# TO UPDATE
+Delete the old RuleTileFromTemplate.cs and RuleTileFromTemplateEditor.cs files and replace them with the updated versions. If you see errors, you have to click the 'Use Sprite Sheet with Template rules' button again on every 'Rule Tile From Template' asset to re-sort the sprites.
+
 # Instructions
 **0.** This tool requires the Unity 2D Packages to function. You can install them from the Package Manager at 'Window > Package Manager'.\
 If you don't see the 2D packages try changing the tab at the top of from 'Packages: In Project' to 'Packages: Unity Registry' to search for it.\
