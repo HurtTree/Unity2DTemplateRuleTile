@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEditor;
-
-
+using System.Collections.Generic;
+using System.Linq;
 
 [CustomEditor(typeof(RuleTileFromTemplate))]
 public class RuleTileFromTemplateEditor : Editor
@@ -39,7 +39,14 @@ public class RuleTileFromTemplateEditor : Editor
         RuleTileFromTemplate myScript = (RuleTileFromTemplate)target;
         if (GUILayout.Button("Use Sprite Sheet with Template Rules"))
         {
+            //This sorts the sprites from the spritesheet to assign to the rule tile
+            //THIS ONLY WORKS WITH THE DEFAULT NAMES THAT UNITY ASSIGNS TO SPRITES IN THE SPRITE EDITOR
+            string spritepath = AssetDatabase.GetAssetPath(myScript.SpriteSheet);
+            List<Sprite> lsSprites = AssetDatabase.LoadAllAssetsAtPath(spritepath).OfType<Sprite>().ToList();
+            lsSprites.Sort(delegate (Sprite x, Sprite y) { return int.Parse(x.name.Substring(x.name.LastIndexOf('_') + 1)).CompareTo(int.Parse(y.name.Substring(y.name.LastIndexOf('_') + 1))); });
+            myScript.SortedSprites = lsSprites;
             myScript.ButtonClicked();
+
             //This forces the preview icon to update
             EditorUtility.SetDirty(myScript);
             Repaint();
