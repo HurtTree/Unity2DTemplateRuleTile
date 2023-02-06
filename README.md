@@ -11,7 +11,7 @@ If you have any questions, suggestions, or feedback, please let me know!
 
 # Instructions
 **0.** This tool requires the Unity 2D Packages to function. You can install them from the Package Manager at 'Window > Package Manager'.\
-If you don't see the 2D packages try changing the tab at the top of from 'Packages: In Project' to 'Packages: Unity Registry' to search for it.
+If you don't see the 2D packages try changing the tab at the top of from 'Packages: In Project' to 'Packages: Unity Registry' to search for it.\
 <img src="https://user-images.githubusercontent.com/122301912/216240948-e2b0740b-b45f-4689-8b83-e02c1e62ad7c.png" width="500">
 
 
